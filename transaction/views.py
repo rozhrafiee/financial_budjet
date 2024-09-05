@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 import json
 from .models import Companies, Totalbalance
-from .serializers import PlaceSerializer, ReservationSerializer
+from .serializers import CompaniesSerializer, TotalbalanceSerializer
 from rest_framework.generics import (
     ListAPIView, RetrieveAPIView, CreateAPIView,
     DestroyAPIView, UpdateAPIView, ListCreateAPIView,
@@ -12,11 +12,10 @@ from rest_framework.generics import (
 
 class CompaniesList(ListAPIView):
     queryset = Companies.objects.all()
-    serializer_class = PlaceSerializer
+    serializer_class = CompaniesSerializer
 class CompaniesCreate(CreateAPIView):
     queryset = Companies.objects.all()
-    serializer_class = PlaceSerializer
-
+    serializer_class = CompaniesSerializer
 class totalbalanceList(ListAPIView):
     queryset = Totalbalance.objects.all()
     serializer_class = TotalbalanceSerializer
