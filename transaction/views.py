@@ -19,3 +19,6 @@ class CompaniesCreate(CreateAPIView):
 class totalbalanceList(ListAPIView):
     queryset = Totalbalance.objects.all()
     serializer_class = TotalbalanceSerializer
+    
+def calculate(request):
+    pass
