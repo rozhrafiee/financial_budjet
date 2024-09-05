@@ -5,4 +5,7 @@ class SavingPlanSerializer:
         model = SavingPlan
         fieds = "__all__"
 
-     
+class TotalSavingSerializer:
+    class Meta:
+        model = TotalSaving
+        fieds = "__all__"
