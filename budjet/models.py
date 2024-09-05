@@ -10,7 +10,7 @@ class Title(models.Model):
         return self.title
 
 class Budejet(models.Model):
-    pass
+    budjet = models.IntegerField()
     
 
     

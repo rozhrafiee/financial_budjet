@@ -13,4 +13,6 @@ class BudjetDetail(ListCreateAPIView):
     def get_queryset(self):
         return Title.objects.filter(user=self.request.user)
 
+
+
 # Create your views here.
