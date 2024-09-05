@@ -13,6 +13,18 @@ class BudjetDetail(ListCreateAPIView):
     def get_queryset(self):
         return Title.objects.filter(user=self.request.user)
 
+class login(TokenObtainPairView):
+    pass
+
+class refresh(token_refresh):
+    pass
+
+def make_budjet(request):
+    money = Title.budget - Title.payed_price
+    Budejet.budjet = money
+    Budejet.budjet.save()
+    
+
 
 
 # Create your views here.
